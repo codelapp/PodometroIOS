@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,98 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Podometro" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PODOMETRO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeO-Xv-LKc">
+                                <rect key="frame" x="16" y="37" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pX3-qM-4if">
+                                <rect key="frame" x="16" y="83" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DISTANCIA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5Q-p9-8KB">
+                                <rect key="frame" x="16" y="127" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf2-fa-fI9">
+                                <rect key="frame" x="16" y="201" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="INICIAR">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="iniciar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SIR-mF-X3p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TD8-ed-naM">
+                                <rect key="frame" x="16" y="252" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="DETENER">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="detener:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JgO-jR-Dyq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGN-Ze-Kxu">
+                                <rect key="frame" x="16" y="306" width="288" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="REINICIAR">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reiniciar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6R-4M-gZU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oGN-Ze-Kxu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2Dz-fe-49D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wf2-fa-fI9" secondAttribute="trailing" constant="16" id="5cH-Lx-2XY"/>
+                            <constraint firstItem="Wf2-fa-fI9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8b3-hX-E9R"/>
+                            <constraint firstItem="pX3-qM-4if" firstAttribute="top" secondItem="BeO-Xv-LKc" secondAttribute="bottom" constant="25" id="BYy-HP-HbK"/>
+                            <constraint firstItem="BeO-Xv-LKc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DQO-gr-FB6"/>
+                            <constraint firstItem="TD8-ed-naM" firstAttribute="top" secondItem="Wf2-fa-fI9" secondAttribute="bottom" constant="21" id="HbA-qD-yGM"/>
+                            <constraint firstItem="TD8-ed-naM" firstAttribute="top" secondItem="Wf2-fa-fI9" secondAttribute="bottom" constant="21" id="OfW-iv-IWQ"/>
+                            <constraint firstItem="pX3-qM-4if" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oph-mV-QLG"/>
+                            <constraint firstItem="BeO-Xv-LKc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="Ui5-op-yaM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oGN-Ze-Kxu" secondAttribute="trailing" constant="16" id="UkI-Wa-Rb9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u5Q-p9-8KB" secondAttribute="trailing" constant="16" id="VOg-Jq-z12"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TD8-ed-naM" secondAttribute="trailing" constant="16" id="W0r-SO-yrK"/>
+                            <constraint firstItem="u5Q-p9-8KB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Wty-IH-vDR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pX3-qM-4if" secondAttribute="trailing" constant="16" id="YCF-2j-O2K"/>
+                            <constraint firstItem="TD8-ed-naM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bTj-gR-4un"/>
+                            <constraint firstItem="u5Q-p9-8KB" firstAttribute="top" secondItem="pX3-qM-4if" secondAttribute="bottom" constant="23" id="cAc-RU-UB3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oGN-Ze-Kxu" secondAttribute="bottom" constant="232" id="enq-mn-0OE"/>
+                            <constraint firstItem="Wf2-fa-fI9" firstAttribute="top" secondItem="u5Q-p9-8KB" secondAttribute="bottom" constant="53" id="gxu-tH-CcO"/>
+                            <constraint firstItem="oGN-Ze-Kxu" firstAttribute="top" secondItem="TD8-ed-naM" secondAttribute="bottom" constant="24" id="i16-OZ-0by"/>
+                            <constraint firstItem="u5Q-p9-8KB" firstAttribute="top" secondItem="pX3-qM-4if" secondAttribute="bottom" constant="23" id="mYB-JE-64U"/>
+                            <constraint firstItem="Wf2-fa-fI9" firstAttribute="top" secondItem="u5Q-p9-8KB" secondAttribute="bottom" constant="53" id="mic-A3-RkO"/>
+                            <constraint firstItem="pX3-qM-4if" firstAttribute="top" secondItem="BeO-Xv-LKc" secondAttribute="bottom" constant="25" id="oNB-Ql-QyP"/>
+                            <constraint firstItem="oGN-Ze-Kxu" firstAttribute="top" secondItem="TD8-ed-naM" secondAttribute="bottom" constant="24" id="rCp-nB-3Vo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BeO-Xv-LKc" secondAttribute="trailing" constant="16" id="wc4-Tm-CT6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="distancia" destination="u5Q-p9-8KB" id="XAT-bZ-ldT"/>
+                        <outlet property="pasos" destination="pX3-qM-4if" id="ynr-un-cEC"/>
+                        <outlet property="titulo" destination="BeO-Xv-LKc" id="0G3-L3-E7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-99.375" y="117.25352112676056"/>
         </scene>
     </scenes>
 </document>

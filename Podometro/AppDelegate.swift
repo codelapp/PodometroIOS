@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Podometro
-//
-//  Created by Jorge Maldonado Borbón on 14/02/18.
-//  Copyright © 2018 Jorge Maldonado Borbón. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
